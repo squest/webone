@@ -1,6 +1,24 @@
-(ns tutorial.core)
+(ns tutorial.core
+  (:require [tutorial.sample :as ts]
+            [questdb.core :refer :all]
+            [clojure.set :refer [union difference]]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn kuadratin-semua
+  [lst]
+  (map ts/square lst))
+
+(defn cubin-semua
+  [lst]
+  (map ts/cube lst))
+
+(defn gabungin
+  [s1 s2]
+  (union s1 s2))
+
+(def db "hellodb")
+
+
+
+
+
+
