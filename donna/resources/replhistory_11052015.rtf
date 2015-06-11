@@ -1,0 +1,271 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 Starting nREPL server...\
+/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -Dclojure.compile.path=/Users/donnafridasafiera/Documents/Zenius/webone/donna/target/classes -Ddonna.version=0.1.0-SNAPSHOT -Dclojure.debug=false -Didea.launcher.port=7534 "-Didea.launcher.bin.path=/Applications/IntelliJ IDEA 14 CE.app/Contents/bin" -classpath "/Users/donnafridasafiera/Documents/Zenius/webone/donna/test:/Users/donnafridasafiera/Documents/Zenius/webone/donna/src:/Users/donnafridasafiera/Documents/Zenius/webone/donna/dev-resources:/Users/donnafridasafiera/Documents/Zenius/webone/donna/resources:/Users/donnafridasafiera/Documents/Zenius/webone/donna/target/classes:/Users/donnafridasafiera/.m2/repository/org/clojure/tools.analyzer/0.1.0-beta12/tools.analyzer-0.1.0-beta12.jar:/Users/donnafridasafiera/.m2/repository/expectations/expectations/2.0.9/expectations-2.0.9.jar:/Users/donnafridasafiera/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar:/Users/donnafridasafiera/.m2/repository/clojure-complete/clojure-complete/0.2.3/clojure-complete-0.2.3.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/tools.analyzer.jvm/0.1.0-beta12/tools.analyzer.jvm-0.1.0-beta12.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/core.cache/0.6.3/core.cache-0.6.3.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/core.async/0.1.338.0-5c5012-alpha/core.async-0.1.338.0-5c5012-alpha.jar:/Users/donnafridasafiera/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar:/Users/donnafridasafiera/.m2/repository/me/raynes/fs/1.4.6/fs-1.4.6.jar:/Users/donnafridasafiera/.m2/repository/zenedu/squest/questdb/0.2.2/questdb-0.2.2.jar:/Users/donnafridasafiera/.m2/repository/org/ow2/asm/asm-all/4.1/asm-all-4.1.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/core.memoize/0.5.6/core.memoize-0.5.6.jar:/Users/donnafridasafiera/.m2/repository/org/apache/commons/commons-compress/1.8/commons-compress-1.8.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/tools.nrepl/0.2.6/tools.nrepl-0.2.6.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/data.priority-map/0.0.2/data.priority-map-0.0.2.jar:/Users/donnafridasafiera/.m2/repository/org/clojure/clojure/1.7.0-beta3/clojure-1.7.0-beta3.jar:/Applications/IntelliJ IDEA 14 CE.app/Contents/lib/idea_rt.jar" com.intellij.rt.execution.application.AppMain clojure.main -i /Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj\
+Connecting to local nREPL server...\
+Loading /Users/donnafridasafiera/Library/Application Support/IdeaIC14/clojure-plugin/lib/cursive.jar!/cursive/repl/runtime.clj... done\
+Clojure 1.7.0-beta3\
+nREPL server started on port 54544 on host 127.0.0.1 - nrepl://127.0.0.1:54544\
+Loading src/donna/core.clj... done\
+(in-ns 'donna.core)\
+=> #object[clojure.lang.Namespace 0x50d84dc0 "donna.core"]\
+(haha)\
+=> "Heeellll"\
+(create! db)\
+=> \{:status true, :message "firstdb has been created"\}\
+(exists? db)\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: exists? in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:1:1) \
+(exist? db)\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: exist? in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:1:1) \
+(db-exists? db)\
+=> true\
+(put-doc! db \{:name "Eddard Stark" :type :person\})\
+=> \{:name "Eddard Stark", :type :person, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65"\}\
+(put-docs! db [\{:name "Catelyn Stark" :maiden_name "Tully" :type :person\}\
+               \{:name "Robb Stark" :type :person :status :deceased\}\
+               \{:name "Sansa Stark" :type :person :status :alive\}])\
+=> ("dacc84d6-cf35-48b7-8551-3f360361c457" "58f3a6a9-19f1-4d54-aa11-16601601da4f" "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6")\
+(put-docs! db [\{:name "Arya Stark" :type :person :status :alive\}\
+               \{:name "Bran Stark" :type :person :status :unknown\}\
+               \{:name "Rickon Stark" :type :person :status :unknown\}\
+               \{:name "Jon Snow" :type :person :status :alive\}])\
+=> ("1d380bf7-a2bf-4b51-82c8-4121872d2499" "3f5d3732-02d7-477b-9999-e84b1014f8c6" "2ea64513-1084-4c55-b66c-8e34e95562ea" "9bf81435-2170-47ac-a3f9-4852b094c7bc")\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :person, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :person, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457"\} \{:name "Robb Stark", :type :person, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f"\} \{:name "Sansa Stark", :type :person, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6"\} \{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\} \{:name "Bran Stark", :type :person, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6"\} \{:name "Rickon Stark", :type :person, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\})\
+(count (get-docs db))\
+=> 8\
+(last (get-docs db))\
+=> \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\}\
+((last (get-docs db)) :name)\
+=> "Jon Snow"\
+((last (get-docs db)) :uuid\
+  )\
+=> "9bf81435-2170-47ac-a3f9-4852b094c7bc"\
+(get-docs db "9bf81435-2170-47ac-a3f9-4852b094c7bc" )\
+=> (nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil)\
+(get-doc db "9bf81435-2170-47ac-a3f9-4852b094c7bc" )\
+=> \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\}\
+(map #(keys %) (get-docs db))\
+=> ((:name :type :uuid) (:name :maiden_name :type :uuid) (:name :type :status :uuid) (:name :type :status :uuid) (:name :type :status :uuid) (:name :type :status :uuid) (:name :type :status :uuid) (:name :type :status :uuid))\
+(map #(% :name) (get-docs db))\
+=> ("Eddard Stark" "Catelyn Stark" "Robb Stark" "Sansa Stark" "Arya Stark" "Bran Stark" "Rickon Stark" "Jon Snow")\
+(map #(% :uuid) (get-docs db))\
+=> ("a67b7cf6-458d-4d81-93cf-b7904cd6ea65" "dacc84d6-cf35-48b7-8551-3f360361c457" "58f3a6a9-19f1-4d54-aa11-16601601da4f" "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6" "1d380bf7-a2bf-4b51-82c8-4121872d2499" "3f5d3732-02d7-477b-9999-e84b1014f8c6" "2ea64513-1084-4c55-b66c-8e34e95562ea" "9bf81435-2170-47ac-a3f9-4852b094c7bc")\
+(find-doc db \{:status :alive\})\
+=> \{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\}\
+(find-doc db \{:type :person\})\
+=> \{:name "Robb Stark", :type :person, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f"\}\
+(find-docs db \{:type :person\})\
+=> (\{:name "Robb Stark", :type :person, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f"\} \{:name "Eddard Stark", :type :person, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65"\} \{:name "Bran Stark", :type :person, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6"\} \{:name "Rickon Stark", :type :person, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea"\} \{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :person, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Sansa Stark", :type :person, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6"\})\
+(find-docs db \{:status :alive\})\
+=> (\{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Sansa Stark", :type :person, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6"\})\
+(find-docs db \{:status :alive\})\
+=> (\{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Sansa Stark", :type :person, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6"\})\
+(find-docs db \{:status :alive :status :unknown\})\
+IllegalArgumentException Duplicate key: :status  clojure.lang.PersistentArrayMap.createWithCheck (PersistentArrayMap.java:70)\
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)\
+(find-docs db \{:status [:alive :unknown]\
+               \})\
+=> ()\
+(find-docs db \{:status :deceased\
+               \})\
+=> (\{:name "Robb Stark", :type :person, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f"\})\
+(find-docs db \{:or \{:status :deceased\} \{:status :alive\}\})\
+RuntimeException Map literal must contain an even number of forms  clojure.lang.Util.runtimeException (Util.java:221)\
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)\
+(find-docs db \{:or \{:status :deceased\} \{:status :alive\}\})\
+RuntimeException Map literal must contain an even number of forms  clojure.lang.Util.runtimeException (Util.java:221)\
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)\
+(find-docs db \{:or \{:status :deceased :name "Arya Stark"\}\})\
+=> (\{:name "Robb Stark", :type :person, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f"\} \{:name "Arya Stark", :type :person, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499"\})\
+(find-docs db \{:and\
+               \{:status :deceased :name "Arya Stark"\}\})\
+=> ()\
+(find-docs db \{:and\
+               \{:status :deceased :name "Arya Stark"\}\} false)\
+=> #\{\}\
+(find-docs db \{:or\
+               \{:status :deceased :name "Arya Stark"\}\} false)\
+=> #\{"58f3a6a9-19f1-4d54-aa11-16601601da4f" "1d380bf7-a2bf-4b51-82c8-4121872d2499"\}\
+( find-doc db \{:name Sansa Stark\})\
+RuntimeException Map literal must contain an even number of forms  clojure.lang.Util.runtimeException (Util.java:221)\
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)\
+(put-doc! db \{:uuid ((find-doc db \{:name "Sansa Stark"\}) :uuid) :last_seen "Winterfell" :description "Married to Ramsay Bolton" :type :noble\})\
+=> \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Arya Stark"\}) :uuid) :last_seen "Braavos" :description "cultist" :type :noble\})\
+=> \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Catelyn Stark"\}) :uuid) :last_seen "Frey's Manor" :description "throat opened" :type :noble\})\
+=> \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Eddard Stark"\}) :uuid) :last_seen "King's Landing" :description "Beheaded" :type :noble\})\
+=> \{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Robb Stark"\}) :uuid) :last_seen "Frey's Manor" :description "Stabbed by Roose Bolton" :type :noble\})\
+=> \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Bran Stark"\}) :uuid) :last_seen "the North" :description "Meeting some children and granddad\
+" :type :noble\})\
+=> \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Rickon Stark"\}) :uuid) :last_seen "the North" :description "Some say hiding, some say dead\
+" :type :noble\})\
+=> \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\}\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\})\
+(put-doc! db \{:uuid ((find-doc db \{:name "Hodor"\}) :uuid) :last_seen "the North" :description "walking with a giant and 2 underaged guys" :type :commoner :known_alliance :wildling\})\
+NullPointerException   donna.core/eval10651 (form-init2590873022293464885.clj:1)\
+(put-doc! db \{:name "Osha" :last_seen "the North" :description "walking with a giant and 2 underaged guys" :type :commoner :known_alliance :wildling\})\
+=> \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52"\}\
+(put-doc! db \{:name "Hodor" :last_seen "the North" :description "seen with a child on his back" :type :commoner\})\
+=> \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb"\}\
+(put-doc! db \{:name "grandma winterfell" :last_seen "Winterfell" :description "flayed by Ramsay Bolton" :type :commoner :status :deceased\})\
+=> \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Hodor"\}) :uuid) :status :unknown\})\
+=> \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\}\
+(put-doc! db \{:uuid ((find-doc db \{:name "Osha"\}) :uuid) :status :unknown\})\
+=> \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\}\
+(put-doc! db \{:name "Brienne" :status :unknown\})\
+=> \{:name "Brienne", :status :unknown, :uuid "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\}\
+(last (get-docs db))\
+=> \{:name "Brienne", :status :unknown, :uuid "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\}\
+(last (get-docs db))\
+=> \{:name "Brienne", :status :unknown, :uuid "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\}\
+(del-doc! ((last (get-docs db)) :uuid))\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: del-doc! in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:1:1) \
+(del-doc!! ((last (get-docs db)) :uuid))\
+ArityException Wrong number of args (1) passed to: core/del-doc!!  clojure.lang.AFn.throwArity (AFn.java:429)\
+(del-doc!! ((last (get-docs db)) :uuid))\
+ArityException Wrong number of args (1) passed to: core/del-doc!!  clojure.lang.AFn.throwArity (AFn.java:429)\
+((last (get-docs db)) :uuid)\
+=> "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\
+(del-doc!! "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\
+RuntimeException EOF while reading, starting at line 1  clojure.lang.Util.runtimeException (Util.java:221)\
+(del-doc!! "5ed52de2-8747-4d98-b5bb-8e94d6223fd6"\
+RuntimeException EOF while reading, starting at line 1  clojure.lang.Util.runtimeException (Util.java:221)\
+(del-doc!! "5ed52de2-8747-4d98-b5bb-8e94d6223fd6")\
+ArityException Wrong number of args (1) passed to: core/del-doc!!  clojure.lang.AFn.throwArity (AFn.java:429)\
+(del-doc!! db "5ed52de2-8747-4d98-b5bb-8e94d6223fd6")\
+=> true\
+(merge \{:a 1 :b 2\} \{:c 3\})\
+=> \{:a 1, :b 2, :c 3\}\
+(map #(merge % \{:c 3\}) \{:a 1 :b 2\})\
+=> ([:a 1 \{:c 3\}] [:b 2 \{:c 3\}])\
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(merge i j)]]\
+  gabung)\
+=> (#object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x40082eb8 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@40082eb8"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x453a23de "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@453a23de"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x15cda3ea "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@15cda3ea"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x25f7b5a1 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@25f7b5a1"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x248b2249 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@248b2249"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x303bd1d5 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@303bd1d5"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x4811e6cb "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@4811e6cb"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x50d308d5 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@50d308d5"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x2d37e1ec "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@2d37e1ec"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x43ec38e6 "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@43ec38e6"] #object[donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538 0x40cb9ee "donna.core$eval11529$iter__11523__11530$fn__11531$iter__11525__11532$fn__11533$gabung__11538@40cb9ee"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(put-docs db (merge (i :uuid) j))]]\
+  gabung)\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: put-docs in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:3:21) \
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(put-docs db (merge (i :uuid) j))]]\
+  gabung)\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: put-docs in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:3:21) \
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(put-doc! db (merge (i :uuid) j))]]\
+  gabung)\
+=> (#object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x7457461f "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@7457461f"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0xab8925a "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@ab8925a"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x54c4e4e5 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@54c4e4e5"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x6a2fc6dd "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@6a2fc6dd"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x24860239 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@24860239"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x6a626eb1 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@6a626eb1"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x19725cd4 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@19725cd4"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0xdff6809 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@dff6809"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x197c2445 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@197c2445"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x6092c63d "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@6092c63d"] #object[donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644 0x6b8da207 "donna.core$eval11635$iter__11629__11636$fn__11637$iter__11631__11638$fn__11639$gabung__11644@6b8da207"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(put-docs! db (merge (i :uuid) j))]]\
+  gabung)\
+=> (#object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x2f16732a "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@2f16732a"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x27006bc3 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@27006bc3"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x78fcee36 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@78fcee36"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x56644dc9 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@56644dc9"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x4a77fb0c "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@4a77fb0c"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x6e0ddff2 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@6e0ddff2"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x719f015b "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@719f015b"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x56100a4 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@56100a4"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x703b249f "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@703b249f"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x70c99725 "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@70c99725"] #object[donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708 0x79d5d5be "donna.core$eval11699$iter__11693__11700$fn__11701$iter__11695__11702$fn__11703$gabung__11708@79d5d5be"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+(for [i (get-docs db)\
+      j \{:homeland :Westeros\}\
+      :let [gabung #(put-doc! db (merge (i :uuid) j))]]\
+  gabung)\
+=> (#object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x6465d3a3 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@6465d3a3"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x11f7569d "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@11f7569d"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x5d05cd98 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@5d05cd98"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x78a6dae5 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@78a6dae5"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x3294e699 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@3294e699"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x197c0de8 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@197c0de8"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x6a666a52 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@6a666a52"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x2459e409 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@2459e409"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x31ec6e35 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@31ec6e35"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x480636ad "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@480636ad"] #object[donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752 0x116be105 "donna.core$eval11743$iter__11737__11744$fn__11745$iter__11739__11746$fn__11747$gabung__11752@116be105"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+(for [i (get-docs db)\
+      j [\{:homeland :Westeros\}]\
+      :let [gabung #(put-doc! db (merge (i :uuid) j))]]\
+  gabung)\
+=> (#object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0xf89d913 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@f89d913"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x30205371 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@30205371"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x246e46ce "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@246e46ce"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x1e2e056e "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@1e2e056e"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x5fae06f9 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@5fae06f9"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x6da77da6 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@6da77da6"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x3b291eea "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@3b291eea"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x55427994 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@55427994"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x7a74340b "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@7a74340b"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x2c683cae "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@2c683cae"] #object[donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795 0x5f45a987 "donna.core$eval11789$iter__11783__11790$fn__11791$iter__11785__11792$fn__11793$fn__11794$gabung__11795@5f45a987"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+\
+(for [i (get-docs db)\
+      j [\{:homeland :Westeros\}]\
+      :let [gabung #(put-doc! db (merge (get-doc db (i :uuid)) j))]]\
+  gabung)\
+=> (#object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x51bb3adb "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@51bb3adb"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x4f4946ed "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@4f4946ed"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x5cdae78f "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@5cdae78f"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x488ccdf1 "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@488ccdf1"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x40694bd9 "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@40694bd9"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x45120317 "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@45120317"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x4eff62a5 "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@4eff62a5"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x6032ddce "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@6032ddce"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x6a8f7592 "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@6a8f7592"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0x3fd0c96f "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@3fd0c96f"] #object[donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843 0xa0f6e7a "donna.core$eval11837$iter__11831__11838$fn__11839$iter__11833__11840$fn__11841$fn__11842$gabung__11843@a0f6e7a"])\
+(get-docs db)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened"\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton"\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton"\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist"\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n"\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n"\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc"\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07"\})\
+(get-doc db "a67b7cf6-458d-4d81-93cf-b7904cd6ea65")\
+=> \{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\}\
+(merge (get-doc db "a67b7cf6-458d-4d81-93cf-b7904cd6ea65") \{:homeland :Westeros\} )\
+=> \{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded", :homeland :Westeros\}\
+(get-doc db "a67b7cf6-458d-4d81-93cf-b7904cd6ea65")\
+=> \{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded"\}\
+(get-doc db "a67b7c\
+f6-458d-4d81-93cf-b7904cd6ea65")\
+=> nil\
+(for [i (get-docs db)\
+      j [\{:homeland :Westeros\}]\
+      :let [gabung (put-doc! db (merge (get-doc db (i :uuid)) j))]]\
+RuntimeException EOF while reading, starting at line 1  clojure.lang.Util.runtimeException (Util.java:221)\
+(for [i (get-docs db)\
+      l [\{:homeland :Westeros\}]\
+      :let [gabung (put-doc! db (merge (get-doc db (i :uuid)) j))]]\
+  gabung)\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: j in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:3:33) \
+(for [i (get-docs db)\
+      j [\{:homeland :Westeros\}]\
+      :let [gabung (put-doc! db (merge (get-doc db (i :uuid)) j))]]\
+  gabung)\
+=> (\{:name "Eddard Stark", :type :noble, :uuid "a67b7cf6-458d-4d81-93cf-b7904cd6ea65", :last_seen "King's Landing", :description "Beheaded", :homeland :Westeros\} \{:name "Catelyn Stark", :maiden_name "Tully", :type :noble, :uuid "dacc84d6-cf35-48b7-8551-3f360361c457", :last_seen "Frey's Manor", :description "throat opened", :homeland :Westeros\} \{:name "Robb Stark", :type :noble, :status :deceased, :uuid "58f3a6a9-19f1-4d54-aa11-16601601da4f", :last_seen "Frey's Manor", :description "Stabbed by Roose Bolton", :homeland :Westeros\} \{:name "Sansa Stark", :type :noble, :status :alive, :uuid "3e226fc0-f004-4f5d-8c3e-36e5a293a9d6", :last_seen "Winterfell", :description "Married to Ramsay Bolton", :homeland :Westeros\} \{:name "Arya Stark", :type :noble, :status :alive, :uuid "1d380bf7-a2bf-4b51-82c8-4121872d2499", :last_seen "Braavos", :description "cultist", :homeland :Westeros\} \{:name "Bran Stark", :type :noble, :status :unknown, :uuid "3f5d3732-02d7-477b-9999-e84b1014f8c6", :last_seen "the North", :description "Meeting some children and granddad\\n", :homeland :Westeros\} \{:name "Rickon Stark", :type :noble, :status :unknown, :uuid "2ea64513-1084-4c55-b66c-8e34e95562ea", :last_seen "the North", :description "Some say hiding, some say dead\\n", :homeland :Westeros\} \{:name "Jon Snow", :type :person, :status :alive, :uuid "9bf81435-2170-47ac-a3f9-4852b094c7bc", :homeland :Westeros\} \{:name "Osha", :last_seen "the North", :description "walking with a giant and 2 underaged guys", :type :commoner, :known_alliance :wildling, :uuid "d43d9049-f703-490d-bc95-3273399e0e52", :status :unknown, :homeland :Westeros\} \{:name "Hodor", :last_seen "the North", :description "seen with a child on his back", :type :commoner, :uuid "f85a6f05-ae00-448e-99e9-63a0219605fb", :status :unknown, :homeland :Westeros\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07", :homeland :Westeros\})\
+(for [i lannbroh\
+      j [\{:type :noble :hometown "Casterly Rock"\}]\
+      :let [gabungan (merge i j)]]\
+  (add-docs db gabungan))\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: add-docs in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:4:3) \
+(for [i lannbroh\
+      j [\{:type :noble :hometown "Casterly Rock"\}]\
+      :let [gabungan (merge i j)]]\
+  (put-docs! db gabungan))\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: lannbroh in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:1:1) \
+lannbroh\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: lannbroh in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:1:728) \
+Loading src/donna/core.clj... \
+IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.assoc (APersistentVector.java:335)\
+Loading src/donna/core.clj... \
+IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.assoc (APersistentVector.java:335)\
+\
+(for [i lannbroh\
+      j [\{:type :noble :hometown "Casterly Rock"\}]\
+      :let [gabungan (merge i j)]]\
+  gabungan)\
+=> (\{:name "Tywin Lannister", :status :deceased, :description "killed by a dwarf", :homeland :Westeros, :last_seen "King's Landing", :type :noble, :hometown "Casterly Rock"\} \{:name "Cersei Lannister", :status :alive, :description "imprisoned by a sparrow", :homeland :Westeros, :last_seen "Sacred Sept", :type :noble, :hometown "Casterly Rock"\} \{:name "Jamie Lannister", :status :alive, :description "drinking with Prince Doran", :last_seen "Dorne", :type :noble, :hometown "Casterly Rock"\} \{:name "Tyrion Lannister", :status :alive, :description "with Khaleesi. Advising", :last_seen "Mereen", :type :noble, :hometown "Casterly Rock"\})\
+(for [i lannbroh\
+      j [\{:type :noble :hometown "Casterly Rock"\}]\
+      :let [gabungan (merge i j)]]\
+  (put-docs db gabungan))\
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: put-docs in this context, compiling:(/Users/donnafridasafiera/Library/Caches/IdeaIC14/tmp/form-init2590873022293464885.clj:4:3) \
+(for [i lannbroh\
+      j [\{:type :noble :hometown "Casterly Rock"\}]\
+      :let [gabungan (merge i j)]]\
+  (put-docs! db gabungan))\
+IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.assoc (APersistentVector.java:335)\
+(put-docs! db (for [i lannbroh\
+                    j [\{:type :noble :hometown "Casterly Rock"\}]\
+                    :let [gabungan (merge i j)]]\
+                gabungan))\
+=> ("885eaa08-b364-48e1-ab80-9f649957fde3" "e6776db7-a6d0-44de-810e-89819cc5d685" "7cebf437-182c-4684-9c73-9fb190160ed7" "d45a315e-d046-4e20-8de3-65b1b1775a6e")\
+(take ) get-docs\
+ArityException Wrong number of args (0) passed to: core/take  clojure.lang.AFn.throwArity (AFn.java:429)\
+=> #object[questdb.core$get_docs 0x2d53cac8 "questdb.core$get_docs@2d53cac8"]\
+(take 5 (reverse (get-docs db)))\
+=> (\{:name "Tyrion Lannister", :status :alive, :description "with Khaleesi. Advising", :last_seen "Mereen", :type :noble, :hometown "Casterly Rock", :uuid "d45a315e-d046-4e20-8de3-65b1b1775a6e"\} \{:name "Jamie Lannister", :status :alive, :description "drinking with Prince Doran", :last_seen "Dorne", :type :noble, :hometown "Casterly Rock", :uuid "7cebf437-182c-4684-9c73-9fb190160ed7"\} \{:name "Cersei Lannister", :status :alive, :description "imprisoned by a sparrow", :homeland :Westeros, :last_seen "Sacred Sept", :type :noble, :hometown "Casterly Rock", :uuid "e6776db7-a6d0-44de-810e-89819cc5d685"\} \{:name "Tywin Lannister", :status :deceased, :description "killed by a dwarf", :homeland :Westeros, :last_seen "King's Landing", :type :noble, :hometown "Casterly Rock", :uuid "885eaa08-b364-48e1-ab80-9f649957fde3"\} \{:name "grandma winterfell", :last_seen "Winterfell", :description "flayed by Ramsay Bolton", :type :commoner, :status :deceased, :uuid "45499d74-caee-48a4-937b-849ff8e58f07", :homeland :Westeros\})\
+Loading src/donna/core.clj... }

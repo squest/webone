@@ -3,8 +3,10 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [zenedu.squest/questdb "0.2.2"]])
+  :dependencies [[org.clojure/clojure "1.7.0-beta3"]
+                 [zenedu.squest/questdb "0.2.2"]
+                 [compojure "1.3.4"]
+                 [http-kit "2.1.16"]])
 
 
 
