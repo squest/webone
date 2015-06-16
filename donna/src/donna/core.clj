@@ -4,14 +4,13 @@
               [compojure.route :as route]
               [org.httpkit.server :refer [run-server]]))
 
-(defroutes app-routes
+(defroutes donna
            (GET "/" [] "Hello, Excellence!")
            (GET "/westeros" [] "Hello, Westeros!")
            (GET "/essos" [] "Hello, Essos!"))
 
 (defn -main []
-  (run-server myapp {:port 5000}))
-
+  (run-server donna {:port 5000}))
 
 (def db "firstdb")
 
@@ -30,3 +29,4 @@
       :let [gabungan (merge i j)]]
   gabungan)
 
+(defn a [x] (str x))
