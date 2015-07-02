@@ -20,12 +20,19 @@
 ;; 1. Input Data Games & Movies
 (defn uuid [] (str (java.util.UUID/randomUUID)))
 
-;contoh:
+;contoh manual input:
 
 (comment
   (let [id (uuid)]
     (my-redis (car/set id {:title "Dinoshark" :director "Unknown" :type :movies :genre :action})
 
+              (indexing id))))
+
+; contoh function yang langsung manggil indexing juga:
+(defn input-data
+  [map-input]
+  (let [id (uuid)]
+    (my-redis (car/set id map-input)
               (indexing id))))
 
 
@@ -43,6 +50,7 @@
 ; 3a. (fn [type {kv-pair}]) => (list)
 
 (defn search-kv
+  ([type] (map #(my-redis (car/get %)) (my-redis (car/get type))))
   ([type kv-pair]
    (->> (my-redis (car/get type))
         (map #(my-redis (car/get %)))
